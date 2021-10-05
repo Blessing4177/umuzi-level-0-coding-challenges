@@ -1,7 +1,7 @@
 function vowelCount(str) {
     let vowelsInString = [];
     const vowelArr = ['a', 'e', 'i', 'o', 'u'];
-    const strArr = str.toLowerCase().split('');
+    const strArr = str.toLowerCase();
 
     for (let i = 0; i < strArr.length; i++) {
         if (vowelArr.includes(strArr[i])) {
@@ -11,7 +11,7 @@ function vowelCount(str) {
         }
     }
 
-    console.log(`Vowels: ${vowelsInString.join(', ')}.`);
+    console.log(`Vowels: ${vowelsInString.join(', ')}`);
 }
 
 vowelCount('Umuzi');
