@@ -1,19 +1,14 @@
 function findCommonChar(str1, str2) {
-    const lowerStr1 = str1.toLowerCase();
-    const lowerStr2 = str2.toLowerCase();
-    let commonCharArr = [];
+    const commonCharsArr = str1.toLowerCase().split('').filter(value => str2.includes(value));
+    let filteredCharsArr = [];
 
-    for (let i = 0; i < lowerStr1.length; i++) {
-        if (lowerStr2.includes(lowerStr1[i])) {
-            if (!(commonCharArr.includes(lowerStr1[i]))) {
-                commonCharArr.push(lowerStr1[i])
-            }
+    commonCharsArr.forEach(char => {
+        if (!(filteredCharsArr.includes(char))) {
+            filteredCharsArr.push(char);
         }
-    }
+    });
 
-    console.log(`Common letters: ${commonCharArr.join(', ')}`);
-
-    
+    console.log(`Common letters: ${filteredCharsArr.join(', ')}`);
 }
 
-findCommonChar('house', 'computers');
+findCommonChar('letters ', 'they');
