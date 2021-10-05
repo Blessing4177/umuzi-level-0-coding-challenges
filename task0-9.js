@@ -1,16 +1,13 @@
 function vowelCount(str) {
-    let vowelsInString = [];
     const vowelArr = ['a', 'e', 'i', 'o', 'u'];
-    const strArr = str.toLowerCase();
+    const strArr = str.toLowerCase().split('').filter(value => vowelArr.includes(value));
+    let vowelsInString = [];
 
-    for (let i = 0; i < strArr.length; i++) {
-        if (vowelArr.includes(strArr[i])) {
-            if (!(vowelsInString.includes(strArr[i]))) {
-                vowelsInString.push(strArr[i])
-            }
+    strArr.forEach(char => {
+        if (!(vowelsInString.includes(char))) {
+            vowelsInString.push(char)
         }
-    }
-
+    });
     console.log(`Vowels: ${vowelsInString.join(', ')}`);
 }
 
