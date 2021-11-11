@@ -1,5 +1,5 @@
 function hello(name) {
-    return `Hello ${name}!`;
+  return `Hello ${name}!`;
 }
 
-console.log(hello('Pablo'));
+console.log(hello("Pablo"));
